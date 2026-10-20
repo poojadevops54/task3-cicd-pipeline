@@ -2,6 +2,10 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 
+def greet():
+    return "Hello! CI/CD Pipeline is working."
+
+
 class HealthCheckHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/health":
